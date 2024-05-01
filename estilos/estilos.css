@@ -38,7 +38,7 @@ header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Mostrar elementos del menú en línea */
+    display: flex; 
 }
 
 header nav ul li {
@@ -54,6 +54,8 @@ header nav ul li a:hover {
     text-decoration: underline;
     color: #007bff;
 }
+
+
 
 /*****Main*******/
 .main-content {
@@ -317,19 +319,6 @@ footer div a:hover {
     clear: both;
 }
 
-/********Media query para tablets********/
-@media only screen and (max-width: 768px) {
-    .menu .contenedor-menu2 article {
-        flex-basis: calc(50% - 20px);
-    }
-}
-
-/**********Media query para móviles************/
-@media only screen and (max-width: 576px) {
-    .menu .contenedor-menu2 article {
-        flex-basis: calc(100% - 20px);
-    }
-}
 
 /*****Información*******/
 .contenido {    
@@ -368,3 +357,114 @@ footer div a:hover {
     background-color: #888a88;
 }
 
+/* Media query para tablets */
+@media screen and (max-width: 800px) {
+    /* Estilos específicos para tablets */
+    header {
+        padding: 10px;
+    }
+
+    header .logo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul li a {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .main-content h1 {
+        font-size: 30px;
+    }
+
+    .main-content .row .empanada {
+        flex-basis: calc(50% - 20px);
+    }
+
+    .formulario-contacto .formulario input[type="text"],
+    .formulario-contacto .formulario input[type="email"] {
+        width: calc(100% - 30px);
+    }
+
+    .formulario-contacto .formulario input[type="button"] {
+        width: calc(50% - 30px);
+    }
+
+    .mapa {
+        width: 90%;
+    }
+
+    .info-contacto {
+        padding: 10px;
+    }
+
+    footer div a {
+        margin: 5px;
+    }
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 400px) {
+    /* Estilos específicos para dispositivos móviles */
+    header {
+        padding: 5px;
+    }
+
+    header .logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    header nav ul li a {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .main-content h1 {
+        font-size: 25px;
+    }
+
+    .main-content .row .empanada {
+        flex-basis: calc(100% - 20px);
+    }
+
+    .formulario-contacto .formulario input[type="text"],
+    .formulario-contacto .formulario input[type="email"] {
+        width: calc(100% - 20px);
+    }
+
+    .formulario-contacto .formulario input[type="button"] {
+        width: calc(100% - 20px);
+    }
+
+    .mapa {
+        width: 100%;
+    }
+
+    .info-contacto {
+        padding: 5px;
+    }
+
+    footer div a {
+        margin: 3px;
+    }
+}
